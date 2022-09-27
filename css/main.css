@@ -1,0 +1,262 @@
+@import url("https://fonts.googleapis.com/css2?family=Fredoka+One&family=Roboto+Slab:wght@900&display=swap");
+
+* {
+	box-sizing: border-box;
+	margin: 0;
+	padding: 0;
+}
+
+/* Variables */
+:root {
+	--FF: "Roboto Slab", serif;
+	--ScoreNumber: "Fredoka One", cursive;
+}
+
+body {
+	background: linear-gradient(rgba(0, 0, 0, 0.6), rgba(0, 0, 0, 0.6)),
+		url(/img/bg.jpg);
+	background-size: cover;
+	background-position: center;
+	background-repeat: no-repeat;
+	min-height: 100vh;
+}
+
+main {
+	width: 100%;
+	height: inherit;
+	display: flex;
+	flex-direction: column;
+	align-items: center;
+}
+
+/* Scoreboard */
+
+.scoreBoard {
+	text-align: center;
+	background: linear-gradient(rgba(0, 0, 0, 0.7), rgba(0, 0, 0, 0.7));
+	width: 90%;
+	border: solid 2px #e63946;
+	margin-top: 0.5rem;
+	padding: 1rem;
+}
+
+.scoreBoard .championship {
+	font-size: 1rem;
+	color: #f1faee;
+	font-family: var(--FF);
+}
+
+.team-stats {
+	display: flex;
+}
+
+.home-team {
+	margin-top: 1.5rem;
+	font-size: 1rem;
+	font-family: var(--ScoreNumber);
+	color: #f1faee;
+}
+
+.score {
+	color: #e63946;
+	margin: 0.5rem 0;
+	font-size: 1.2rem;
+}
+
+.number-fouls {
+	color: #80ed99;
+	margin: 0.5rem 0;
+	font-size: 1.2rem;
+}
+
+.quarter {
+	margin-top: 2rem;
+	font-family: var(--ScoreNumber);
+	margin: auto;
+}
+
+.period {
+	font-size: 1rem;
+	color: #f1faee;
+	margin-bottom: 1rem 0;
+}
+
+.current-period {
+	font-size: 1.2rem;
+	color: #80ed99;
+}
+
+.guest-team {
+	margin-top: 1.5rem;
+	font-size: 1rem;
+	font-family: var(--ScoreNumber);
+	color: #f1faee;
+}
+
+/* Scoreboard Controller */
+
+.scoreboard-control {
+	display: flex;
+	gap: 1.2rem;
+	margin-top: 2rem;
+	background: linear-gradient(rgba(0, 0, 0, 0.7), rgba(0, 0, 0, 0.7));
+	border: solid 2px #80ed99;
+	width: 90%;
+	justify-content: center;
+}
+
+.scoreboard-control:last-child {
+	margin-top: 0;
+	border-top: none;
+}
+
+.home-team-btn {
+	text-align: center;
+}
+
+.team {
+	color: #f1faee;
+	margin: 1.2rem 0 0.5rem 0;
+}
+
+.guest-team-btn {
+	text-align: center;
+}
+
+.score-btn {
+	padding: 0.5rem;
+	font-size: 1rem;
+	font-family: var(--ScoreNumber);
+	border: solid 1px #80ed99;
+	border-radius: 10px;
+	background-color: #f1faee;
+	color: #e63946;
+	cursor: pointer;
+}
+
+.foul-btn {
+	padding: 0.5rem;
+	margin: 1rem 0;
+	font-size: 1rem;
+	font-family: var(--ScoreNumber);
+	border: solid 1px #e63946;
+	border-radius: 10px;
+	background-color: #f1faee;
+	color: #e63946;
+	cursor: pointer;
+}
+
+.reset-btn {
+	padding: 0.5rem;
+	margin: 1rem 0;
+	font-size: 1rem;
+	font-family: var(--ScoreNumber);
+	border: solid 1px #80ed99;
+	border-radius: 10px;
+	background-color: #f1faee;
+	color: #e63946;
+	cursor: pointer;
+}
+
+.btn:is(:hover, :active) {
+	opacity: 0.6;
+}
+
+/* media Iphone 4 */
+
+@media all and (max-width: 320px) and (max-height: 480px) {
+	.scoreboard-control {
+		margin-top: 0.5rem;
+	}
+
+	.scoreboard-control:last-child {
+		padding: 0;
+	}
+}
+
+/* phones 500px on width */
+
+@media all and (min-width: 500px) {
+	.scoreBoard .championship {
+		font-size: 2rem;
+	}
+
+	.score-board-numbers {
+		font-size: 1.7rem;
+	}
+}
+
+/* phones 600px on width */
+
+@media all and (min-width: 600px) {
+	.scoreBoard {
+		width: 70%;
+	}
+
+	.scoreboard-control {
+		width: 70%;
+	}
+
+	.team-stats {
+		justify-content: space-evenly;
+	}
+
+	.quarter {
+		margin: auto 0;
+	}
+}
+
+/* tables 800px on width */
+
+@media all and (min-width: 800px) {
+	.score-board-numbers {
+		font-size: 2rem;
+	}
+
+	.scoreboard-labels {
+		font-size: 1.5rem;
+	}
+
+	.btn {
+		font-size: 1.4rem;
+		margin: 1rem 0.25rem;
+	}
+}
+
+@media all and (min-width: 1100px) {
+	.scoreBoard {
+		width: 50%;
+	}
+
+	.scoreboard-control {
+		width: 50%;
+	}
+}
+
+/* min height 600px */
+
+@media all and (min-height: 600px) {
+	.btn {
+		font-size: 1.4rem;
+		margin: 1rem 0.25rem;
+	}
+
+	.scoreBoard {
+		margin-top: 4rem;
+	}
+}
+
+/* min height 700px */
+
+@media all and (min-height: 700px) {
+	.scoreBoard {
+		margin-top: 5rem;
+	}
+}
+
+/* min height 800px */
+@media all and (min-height: 850px) {
+	.scoreBoard {
+		margin-top: 7rem;
+	}
+}

@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="en">
+	<head>
+		<meta charset="UTF-8" />
+		<meta http-equiv="X-UA-Compatible" content="IE=edge" />
+		<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+		<title>Scoreboard</title>
+		<link rel="stylesheet" href="/css/main.css" />
+	</head>
+	<body>
+		<main>
+			<div class="scoreBoard">
+				<h1 class="championship">The National Championship</h1>
+
+				<div class="team-stats">
+					<div class="home-team">
+						<h2 class="team scoreboard-labels">HOME</h2>
+						<p class="score score-board-numbers" id="home-score-el">0</p>
+						<h2 class="fouls scoreboard-labels scoreboard-labels">FOULS</h2>
+						<p class="number-fouls score-board-numbers" id="home-fouls-el">0</p>
+					</div>
+
+					<div class="quarter">
+						<h2 class="period scoreboard-labels scoreboard-labels">PERIOD</h2>
+						<p class="current-period score-board-numbers" id="period-el">0</p>
+					</div>
+
+					<div class="guest-team">
+						<h2 class="team scoreboard-labels">GUEST</h2>
+						<p class="score score-board-numbers" id="guest-score-el">0</p>
+						<h2 class="fouls scoreboard-labels">FOULS</h2>
+						<p class="number-fouls score-board-numbers" id="guest-fouls-el">0</p>
+					</div>
+				</div>
+			</div>
+
+			<div class="scoreboard-control">
+				<div class="home-team-btn">
+					<h2 class="team scoreboard-labels">HOME</h2>
+					<button class="score-btn btn" onclick="homeplus1()">+1</button>
+					<button class="score-btn btn" onclick="homeplus2()">+2</button>
+					<button class="score-btn btn" onclick="homeplus3()">+3</button>
+					<button class="foul-btn btn" onclick="homefoul()">Foul</button>
+				</div>
+
+				<div class="guest-team-btn">
+					<h2 class="team scoreboard-labels">GUEST</h2>
+					<button class="score-btn btn" onclick="guestplus1()">+1</button>
+					<button class="score-btn btn" onclick="guestplus2()">+2</button>
+					<button class="score-btn btn" onclick="guestplus3()">+3</button>
+					<button class="foul-btn btn" onclick="guestfoul()">Foul</button>
+				</div>
+			</div>
+
+			<div class="scoreboard-control">
+				<button class="reset-btn btn" onclick="reset()">RESET</button>
+				<button class="reset-btn btn" onclick="period()">New Period</button>
+			</div>
+		</main>
+		<!-- Script -->
+		<script src="/js/index.js"></script>
+	</body>
+</html>
